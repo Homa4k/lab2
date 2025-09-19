@@ -8,7 +8,7 @@ if __name__ == "__main__":
         QWidget {
             background-color: #2b2b2c;
             font-family: 'Segoe UI', Arial, sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             color: #000000
         }
         QMainWindow {
@@ -23,9 +23,9 @@ if __name__ == "__main__":
         QPushButton {
             background-color: #33bd24;
             color: #2b2b2c;
-            border: none;
             border-radius: 5px;
             padding: 5px 15px;
+            font-size: 16px;
         }
         QPushButton:hover {
             background-color: #2faa20;
