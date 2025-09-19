@@ -9,7 +9,7 @@ from ListWidget import ListWidget
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("To-Do List з PySide6 та SQLite3")
+        self.setWindowTitle("To-Do List")
         self.db_manager = DatabaseManager()
 
         main_widget = QWidget()
