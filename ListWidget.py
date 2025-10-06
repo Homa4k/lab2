@@ -17,7 +17,7 @@ class ListWidget(QListWidget):
         self.setSpacing(3)
 
     def update_counter(self):
-        self.counter_label.setText(f"Кількість задач: {self.count()-1}") #Ф2 - всі значення на 1 менше ніж треба
+        self.counter_label.setText(f"Кількість задач: {self.count()}")
 
     def dragEnterEvent(self, event):
         if event.mimeData().hasFormat("application/x-qabstractitemmodeldatalist"):
@@ -61,7 +61,12 @@ class ListWidget(QListWidget):
 
             elif action == edit_action:
                 current_text = item.text()
-                new_text = QInputDialog.getText(
+                new_text, ok = QInputDialog.getText(
                     self, "Редагувати задачу",
                     "Оновіть опис задачі:", text=current_text
-                ) #Ф3 - некоректна функція редагування
+                )
+                if ok and new_text.strip():
+                    item.setText(new_text.strip())
+                    task_id = item.data(Qt.UserRole)
+                    self.db_manager.update_task_description(task_id, new_text.strip())
+                    self.window().update_all_counters()
