@@ -9,7 +9,7 @@ if __name__ == "__main__":
             background-color: #2b2b2c;
             font-family: 'Segoe UI', Arial, sans-serif;
             font-size: 16px;
-            color: #000000
+            color: #ffffff
         }
         QMainWindow {
             background-color: #2b2b2c;
@@ -34,7 +34,7 @@ if __name__ == "__main__":
             background-color: #ffffff;
             border-radius: 5px;
             padding: 5px;
-           background-color: #151672;
+           background-color: #33bd24;
         }
         QListWidget::item {
             padding: 5px;

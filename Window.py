@@ -20,7 +20,7 @@ class MainWindow(QMainWindow):
         input_layout = QHBoxLayout()
         self.task_input = QLineEdit()
         self.task_input.setPlaceholderText("Add task...")
-        add_button = QPushButton("Очистити") #Ф1 - очистити == додати задачу
+        add_button = QPushButton("Додати")
         add_button.clicked.connect(self.add_task)
         input_layout.addWidget(self.task_input)
         input_layout.addWidget(add_button)
