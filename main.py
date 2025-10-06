@@ -8,7 +8,7 @@ if __name__ == "__main__":
         QWidget {
             background-color: #2b2b2c;
             font-family: 'Segoe UI', Arial, sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             color: #ffffff
         }
         QMainWindow {
